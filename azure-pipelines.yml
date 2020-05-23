@@ -9,7 +9,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '2.1.505'
+  dotnetSdkVersion: '3.1'
 
 steps:
 - task: DotNetCoreInstaller@0
@@ -21,7 +21,7 @@ steps:
   displayName: 'Use .NET Core sdk $(dotnetSdkVersion)'
   inputs:
     packageType: sdk
-    version: 2.1.x
+    version: 3.1.x
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - task: Npm@1
